@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mybd
+    username: postgres
+    password: 905027
+
+  jpa:
+    hibernate:
+      ddl-auto: update   # Hibernate сам создаёт/обновляет таблицы по entity. Для учебного проекта ок,
+                          # в реальных — так делать не стоит (заменим на Flyway позже).
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8088
